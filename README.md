@@ -6,7 +6,7 @@ Why:
 Communication lost in technology. In the waves of the AI technological tsunami, many of the nuances of human communication are diminished as we translate our beings into computers. 
 
 
-93% of communication in nonverbal. 38% of that is noverbal but still audatory. [Source](https://globalforum.diaglobal.org/issue/october-2018/the-power-of-nonverbal-communication-saying-everything-without-saying-anything/#:~:text=In%201971%2C%20Albert%20Mehrabian%2C%20a,how%20to%20control%20that%20impact.)
+93% of communication in nonverbal and 38% of that is noverbal but is audatory. [Source](https://globalforum.diaglobal.org/issue/october-2018/the-power-of-nonverbal-communication-saying-everything-without-saying-anything/#:~:text=In%201971%2C%20Albert%20Mehrabian%2C%20a,how%20to%20control%20that%20impact.)
 
 
 Ideally stacked with video image recognition of body language and computers could become more human communicators.
@@ -19,40 +19,49 @@ Thus the refinement of models that are up to the task of emotion recognition is 
 Other applications/implications: agentic-agents, call centers, customer churn, healthcare service providers...
 
 
-GOAL: To accurately assess the emotional state of speakers in audio recordings.
+Goal: To accurately assess the emotional state of speakers in audio recordings.
 
 
-HOW: Using the librosa library standardize and extract features voice signals from a dataset created for SER modeling and then build, train and test the SER model.
+How: Using the librosa library standardize and extract features voice signals from a dataset created for SER modeling and then build, train and test the SER model.
 
 
-DELIVERABLE: MVP - A functioning LSTM model
+Deliverable: MVP - A functioning LSTM model
 
 
 ## Outline
 
-
 Problem statement
+
 Description
+
 Installation
+
 Contents
+
 Data Sources
+
 Code Structure
+
 Results and Evaluation
+
 Future Work
+
 Acknowledgements & References
+
 Licenses
 
 
 ## Description
 
 
-The aim of this project is to construct and employ an LSTM classification model for Speech Emotion Recognition trained on a hybrid dataset.
+The aim of this project is to construct and employ a Long Short Term Memory (LSTM) classification model for Speech Emotion Recognition (SER) trained on a hybrid dataset.
 
 
 ## Installation
-
+Please begin by opening 01_EDA_Dataset_prep_firstModel.ipynb with [Colab](https://colab.research.google.com/)
 
 Follow the instructions at the beginning of each notebook.
+Alternatively install all libraries in the requirements.txt file in your terminal and then proceed with only the imports and file uploads as outlined in each notebook.
 
 
 ### Contents
@@ -168,29 +177,24 @@ Imported a new raw audio file for classification, put through model which miscla
 
 
 ## Results and Evaluation
-As can be see in the Count_of_Samples_per_Emotion.png the classes are a bit unbalanced.
-It is important to note that the dataset was unbalanced, despite stratifying in the train, test, split, I believe this impacted the performance.
+As can be see in Count_of_Samples_per_Emotion.png the classes are unbalanced.
+It is important to note that despite stratifying in the train-test-split, the class imbalanaces negativley impacted performance.
 
 
-The first model: model_LSTM, 'first_lstm_model.h5 - is the best performing model thus far. had the highest ratio of Accuracy to Validation Loss (our key metrics) and also the highest %'s of those metrics.
+The first model: model_LSTM, 'first_lstm_model.h5 - performed the best. It had the highest Accuracy to Validation Loss (our key metrics) ratio and also the best %'s of those metrics.
 The score was 67% Accuracy and 1.22 Validation Loss (66% and 1.15 Validation Loss if the model was retrained and stopped at its best Epoch 90).
 Most of the tuned models, even with early stopping added, did not improve in performance. This is clearly illustrated by the accuracy test/pred graphics as well as the loss test/pred graphic contained both in the presentation pdf and the images folder, which were created for each iteration of the model.
 
 
 ## Future Work
-Decide whether to balance the data set by finding or imputing more values for the calm label category or if to drop it all together.
-
+Decide whether to balance the data set by finding, imputing more values for or dropping the calm, suprised and neutral label categories.
 
 Further tuning of the current model could help the user familiarize themself with the 
 process of building an LSTM and iterating on it for performance improvements.
 
-
-It would be important to identifying why the models performance seemed to decreased in performance with most iterations seems.
-This will improve understanding of how the model is functioning.
-
+Both early stopping and LS regularization were implemented to improve performance but in fact both worsened the models performance this indicates it is advisable to use a simpler model.
 
 Accessing other possible standardisations techniques, feature extraction and tuning methods would be the next step.
-
 
 Utilize pretrained models such as Whisper, WavLM, and Wav2Vec 2.0, which can be fine-tuned for SER tasks. 
 Any of these hould return greater results as they have been trained on large datasets and have achieved very high accuracy with SER modeling.
