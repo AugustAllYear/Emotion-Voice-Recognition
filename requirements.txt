@@ -1,1 +1,13 @@
-
+ipython==9.1.0
+kagglehub==0.3.13
+librosa==0.11.0
+matplotlib==3.10.6
+numpy==2.3.2
+pandas==2.3.2
+pydub==0.25.1
+scikit_learn==1.7.1
+seaborn==0.13.2
+soundfile==0.13.1
+tensorflow==2.20.0
+torch==2.8.0
+transformers==4.55.2
