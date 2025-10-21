@@ -6,7 +6,7 @@ Why:
 Communication lost in technology. In the waves of the AI technological tsunami, many of the nuances of human communication are diminished as we translate our beings into computers. 
 
 
-93% of communication in nonverbal and 38% of that is noverbal but is audatory. [Source](https://globalforum.diaglobal.org/issue/october-2018/the-power-of-nonverbal-communication-saying-everything-without-saying-anything/#:~:text=In%201971%2C%20Albert%20Mehrabian%2C%20a,how%20to%20control%20that%20impact.)
+93% of communication in nonverbal but 38% of that communication is still audatory. [Source](https://globalforum.diaglobal.org/issue/october-2018/the-power-of-nonverbal-communication-saying-everything-without-saying-anything/#:~:text=In%201971%2C%20Albert%20Mehrabian%2C%20a,how%20to%20control%20that%20impact.)
 
 
 Ideally stacked with video image recognition of body language and computers could become more human communicators.
